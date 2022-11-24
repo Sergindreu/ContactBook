@@ -12,6 +12,7 @@ namespace AppDb.Service
             _context = context;
         }
 
+        //This is a comment
         public void Create(Contacts contact)
         {
             _context.Contacts.Add(contact);
