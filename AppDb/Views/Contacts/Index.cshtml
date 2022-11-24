@@ -1,0 +1,99 @@
+﻿@model IEnumerable<AppDb.Models.Contacts>
+
+
+<div class=" d-flex justify-content-center " style="margin-top:50px;">
+
+    <div class="w-75 ">
+
+        <div class="d-list"style="margin-bottom:20px;">
+
+            <a class="h3 text-black fw-bold">Contact List</a>
+            <ul>
+                <li><a href="" data-bs-toggle="modal" data-bs-target="#crt-new" >New Contact</a></li>
+                <li><a href="">Export</a></li>
+            </ul>
+     
+ 
+        </div>
+
+
+        <table class="table   text-black  table-bordered">
+        <thead>
+                <tr>
+                    <th scope="col">#ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Action</th>
+                </tr>
+        </thead>
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                  
+                    <tr>
+                        <th style="max-width:100px; overflow: hidden;">@item.Id</th>
+                        <td style="max-width:100px; overflow: hidden;">@item.Name</td>
+                        <td style="max-width:100px; overflow: hidden;">@item.Email</td>
+                        <td style="max-width:100px; overflow: hidden;">@item.Phone</td>
+                        <form asp-action="Delete" asp-controller="Contacts" asp-route-id="@item.Id">
+                        <td style="width:100%; overflow: hidden;" class="d-inline-flex justify-content-end">
+                            <input type="button" class="c-button" value="Edit"/>
+                      
+                            <input type="submit" value="Delete" class="d-button"/>
+                        </td>
+                        </form>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    
+</div>
+
+
+<div class="modal" id="crt-new">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+
+            <div class="modal-header">
+                <h4 class="modal-title">New Contact</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+
+            <form asp-action="Create" asp-controller="Contacts" asp-route-id="" class="form">
+               
+
+                <div class="modal-body">
+
+
+                    <div class="form-floating mb-3 mt-3">
+                        <input name="Name" placeholder="Name" class="inp form-control" />
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="form-floating mb-3 mt-3">
+                        <input name="Email" placeholder="Email" class="inp form-control" />
+                        <label for="name">Email</label>
+                    </div>
+                    <div class="form-floating mb-3 mt-3">
+                        <input name="Phone" placeholder="Phone" class="inp form-control" />
+                        <label for="name">Phone</label>
+                    </div>
+                    
+                    
+                   
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="crt-btn" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="crt-btn" value="Create">Create</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

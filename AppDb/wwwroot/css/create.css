@@ -1,0 +1,29 @@
+﻿.main{
+    display:flex;
+    justify-content:center;
+}
+
+.crt-btn {
+
+    width:90px;
+    margin-top: 20px;
+    background-color: #212121;
+    padding: 3px 10px;
+    color: white;
+    border-radius: 5px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.crt-btn:hover{
+    opacity: 1;
+}
+
+.inp{
+    
+    padding:10px 20px;
+    background-color:#f1f1f1;
+    border:none;
+    border-radius: 5px;
+    margin-top: 5px;
+}

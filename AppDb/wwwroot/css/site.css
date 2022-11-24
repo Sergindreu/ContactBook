@@ -1,0 +1,89 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+table th {
+    width: auto !important;
+}
+
+.c-button{
+    margin-left: 10px;
+    width:65px;
+    background-color: #212121;
+    border:none;
+    border-radius:5px;
+    color:white;
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+.c-button:hover{
+    
+    opacity: 1;
+
+}
+
+.d-button {
+    margin-left: 10px;
+    width: 65px;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+.d-button:hover {
+    opacity: 1;
+}
+
+.d-list{
+    display:flex;
+    justify-content: space-between;
+}
+.d-list ul{
+
+    display:inline-flex;
+    justify-content:center;
+
+}
+
+.d-list ul li {
+        list-style: none;
+        margin-left: 20px;
+        background-color: #212121;
+        padding: 5px 10px;
+        color: white;
+        border-radius: 5px;
+        opacity: 0.7;
+        text-decoration:none;
+        transition: 0.3s;
+}
+.d-list ul li a{
+   text-decoration:none;
+   color:white;
+}
+
+.d-list ul li:hover {
+   opacity: 1;
+}
