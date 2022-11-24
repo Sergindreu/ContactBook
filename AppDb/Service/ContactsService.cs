@@ -41,6 +41,13 @@ namespace AppDb.Service
             
         }
 
+        public async  Task<Contacts> Update(int id, Contacts contact)
+        {
+           await _context.Update(contact);
+            _context.SaveChangesAsync();
+            return contact;
+        }
+
         Contacts IContacts.GetById(int id)
         {
             throw new NotImplementedException();

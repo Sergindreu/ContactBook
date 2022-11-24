@@ -37,13 +37,12 @@
                         <td style="max-width:100px; overflow: hidden;">@item.Name</td>
                         <td style="max-width:100px; overflow: hidden;">@item.Email</td>
                         <td style="max-width:100px; overflow: hidden;">@item.Phone</td>
-                        <form asp-action="Delete" asp-controller="Contacts" asp-route-id="@item.Id">
-                        <td style="width:100%; overflow: hidden;" class="d-inline-flex justify-content-end">
-                            <input type="button" class="c-button" value="Edit"/>
-                      
+                       
+                        <td style="width:100%; overflow: hidden;" class="d-inline-flex justify-content-center">
+                            <form asp-action="Delete" asp-controller="Contacts" asp-route-id="@item.Id">
                             <input type="submit" value="Delete" class="d-button"/>
-                        </td>
-                        </form>
+                            </form>
+                        </td> 
                     </tr>
                 }
             </tbody>
@@ -51,6 +50,7 @@
     </div>
     
 </div>
+
 
 
 <div class="modal" id="crt-new">
@@ -71,7 +71,7 @@
 
 
                     <div class="form-floating mb-3 mt-3">
-                        <input name="Name" placeholder="Name" class="inp form-control" />
+                        <input name="Name" placeholder="Name"  class="inp form-control" />
                         <label for="name">Name</label>
                     </div>
                     <div class="form-floating mb-3 mt-3">
@@ -97,3 +97,5 @@
         </div>
     </div>
 </div>
+
+

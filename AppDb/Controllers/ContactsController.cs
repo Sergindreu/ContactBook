@@ -41,5 +41,12 @@ namespace AppDb.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Update(int id,[Bind("Id,Name,Email,Phone")]Contacts contact)
+        {
+            await _service.Update(id,contact);
+            return RedirectToAction(nameof(Index));
+        }
+
     }
 }
