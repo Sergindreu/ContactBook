@@ -19,7 +19,7 @@ Simple .Net Web App Mvc project where you can create , edit , delete contacts.
 
 ![alt text](https://github.com/ClosedXML/ClosedXML/raw/develop/resources/logo/readme.png "Logo Title Text 1")
 
-## Export Dtabase Data To Exel 
+## Export Database Data To Exel 
 
 Here is the example 
 ```c#
