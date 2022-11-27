@@ -48,8 +48,12 @@ Here is the example
 
 ```
 
-## Entity Framework Tools
-## Entity Framework SQlite
+## Entity Framework
+
+- Tools
+- SqLite
+- <https://learn.microsoft.com/en-us/ef/core/>
+
 
 
 
