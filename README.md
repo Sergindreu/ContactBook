@@ -1,4 +1,6 @@
 ![Deploy_Badge](https://badgen.net/github/stars/Sergindreu/ContactBook)
+![Deploy_Badge](https://badgen.net/github/commits/Sergindreu/ContactBook)
+
 
 
 # ContactBook
