@@ -35,15 +35,15 @@ namespace AppDb.Service
 
         public async Task<Contacts> GetById(int id)
         {
-           
-                var result = await _context.Contacts.FirstOrDefaultAsync(n => n.Id == id);
-                return result;
-            
+
+            var result = await _context.Contacts.FirstOrDefaultAsync(n => n.Id == id);
+            return result;
+
         }
 
-        public async  Task<Contacts> Update(int id, Contacts contact)
+        public async Task<Contacts> Update(int id, Contacts contact)
         {
-           await _context.Update(contact);
+            _context.Update(contact);
             _context.SaveChangesAsync();
             return contact;
         }

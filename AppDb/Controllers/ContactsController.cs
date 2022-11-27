@@ -22,6 +22,11 @@ namespace AppDb.Controllers
             return View();
         }
 
+        public IActionResult Edit()
+        {
+            return View();
+        }
+
         [HttpPost]
         public async Task<IActionResult> Create([Bind("Name,Email,Phone")]Contacts contact)
         {
@@ -32,7 +37,7 @@ namespace AppDb.Controllers
            _service.Create(contact);
             return RedirectToAction(nameof(Index));
         }
-
+        
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
@@ -45,7 +50,7 @@ namespace AppDb.Controllers
         public async Task<IActionResult> Update(int id,[Bind("Id,Name,Email,Phone")]Contacts contact)
         {
             await _service.Update(id,contact);
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Edit));
         }
 
     }

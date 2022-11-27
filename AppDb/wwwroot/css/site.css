@@ -14,7 +14,13 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.title{
+    text-decoration:none;
+
 }
 
 textarea:focus, input:focus {
@@ -56,6 +62,21 @@ table th {
 .d-button:hover {
     opacity: 1;
 }
+
+.e-button {
+    margin-left: 10px;
+    width: 65px;
+    background-color: #2ecc00;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+    .e-button:hover {
+        opacity: 1;
+    }
 
 .d-list{
     display:flex;
