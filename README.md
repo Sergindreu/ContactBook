@@ -9,9 +9,9 @@ Simple .Net Web App Mvc project where you can create , edit , delete contacts.
 
 ## Features 
 - Create Contact
-- Edit Contact
+- Edit Contact ( Not avaliable yet)
 - Delete Contact
-
+- Export To Exel
 
 
 ## Tools Used
