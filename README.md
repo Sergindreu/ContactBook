@@ -1,3 +1,6 @@
+https://badgen.net/github/stars/Sergindreu/ContactBook
+
+
 # ContactBook
 
 Simple .Net Web App Mvc project where you can create , edit , delete contacts.
