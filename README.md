@@ -17,6 +17,6 @@ Simple .Net Web App Mvc project where you can create , edit , delete contacts.
 ## Tools Used
 
 
-[1]:http://slashdot.org](https://github.com/ClosedXML/ClosedXML
+<http://slashdot.org](https://github.com/ClosedXML/ClosedXML>
 
 **If you like this project please take a look at our youtube channel**
