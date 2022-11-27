@@ -9,8 +9,16 @@
 
             <a class=" title h3 text-black fw-bold">Contact List</a>
             <ul>
-                <li><a href="" data-bs-toggle="modal" data-bs-target="#crt-new">New Contact</a></li>
-                <li><a href="">Export</a></li>
+                
+                <li data-bs-toggle="modal" data-bs-target="#crt-new" style="background-color:#EB6440;"><i class="material-symbols-outlined">add</i><a>New Contact</a></li>
+
+                <li style="background-color:#497174;">
+                    <form asp-action="ExportExel" asp-controller="Contacts">
+                    <input  type="submit" value="Export" />
+                    </form>
+                </li>
+               
+                
             </ul>
 
 
@@ -40,7 +48,7 @@
 
                         <td style="width:100%; overflow: hidden;" class="d-inline-flex justify-content-center">
                             <form asp-action="Delete" asp-controller="Contacts" asp-route-id="@item.Id">
-                                <input type="submit" value="Delete" class="d-button" />
+                                <input type="submit" value="Delete" class="d-button"  /> 
                             </form>
 
                             <form asp-action="Edit" asp-controller="Contacts" asp-route-id="@item.Id">

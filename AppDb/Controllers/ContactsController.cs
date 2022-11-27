@@ -1,6 +1,8 @@
 ﻿using AppDb.Models;
 using AppDb.Service;
+using ClosedXML.Excel;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace AppDb.Controllers
 {
@@ -51,6 +53,34 @@ namespace AppDb.Controllers
         {
             await _service.Update(id,contact);
             return RedirectToAction(nameof(Edit));
+        }
+
+        public async Task<IActionResult> ExportExel()
+        {
+            DataTable dt = new DataTable("Grid");
+            dt.Columns.AddRange(new DataColumn[4] { new DataColumn("Id"),
+                                            new DataColumn("Name"),
+                                            new DataColumn("Email"),
+                                            new DataColumn("Phone") });
+
+            var customers = await _service.GetAll();
+            foreach (var customer in customers)
+            {
+                dt.Rows.Add(customer.Id, customer.Name, customer.Email, customer.Phone);
+            }
+
+            using (XLWorkbook wb = new XLWorkbook())
+            {
+                wb.Worksheets.Add(dt);
+                using (MemoryStream stream = new MemoryStream())
+                {
+                    wb.SaveAs(stream);
+                    return File(stream.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Repo.xlsx");
+                }
+            }
+
+
+
         }
 
     }
